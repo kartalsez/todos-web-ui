@@ -1,0 +1,22 @@
+.addTodo {
+    display: flex;
+    height: 50px;
+}
+
+.addTodo input {
+    flex: 1 1 100%;
+}
+
+.addTodo button {
+    width: 150px;
+    margin-left: 16px;
+    cursor: pointer;
+    background-color: #4eb5eb;
+    color: white;
+    font-size: medium;
+}
+
+.addTodo button:hover {
+    background-color: #ffd300;
+    color: rgb(76, 51, 152);
+}

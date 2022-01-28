@@ -1,0 +1,26 @@
+.mainLayout {
+  position: relative;
+  padding: 16px;
+  border-radius: 4px;
+  width: 600px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: rgb(76, 51, 152);
+}
+
+.mainLayout header {
+  /*background-color: rgb(76, 51, 152);*/
+  border: 1px solid #ffd300;
+}
+
+.mainLayout header h1 {
+  color: #ffd300;
+  text-align: center;
+}
+
+.mainLayout main {
+  min-height: 300px;
+  margin-top: 16px;
+}

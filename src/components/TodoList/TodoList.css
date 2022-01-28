@@ -1,0 +1,29 @@
+.todoItem {
+    height: 40px;
+    background-color: #ffd300;
+    color: rgb(76, 51, 152);
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.todoItem:hover {
+    background-color: #ffe97d;
+}
+
+.todoItem:first-child {
+    margin-top: 8px
+}
+
+.todoItem span, p {
+    cursor: pointer;
+}
+
+.todoItem.completed p {
+    text-decoration: line-through;
+}
+
+
