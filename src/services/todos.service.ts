@@ -1,9 +1,11 @@
 import {TodoItemModel} from "../core/TodoItem.model";
+import {LOCAL_SERVER_URL, SERVER_URL} from "../constants/constants";
 
-const API_URL="/api/todos"
+// const API_URL=`${LOCAL_SERVER_URL}/api/todos`; TODO: To use local services, you can use this code
+const API_URL=`${SERVER_URL}/api/todos`;
 
 export async function getTodos() {
-    return fetch(API_URL)
+    return fetch(API_URL, {mode:'cors'})
         .then(resp => {
             if (!resp.ok) {
                 if (resp.status >= 400 && resp.status < 500) {
