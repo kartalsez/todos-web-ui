@@ -28,3 +28,7 @@ Backend project already deployed to Heroku.
 * GitHub and Netlify connected, Deployment branch is release/todos.
 * Right now, Automatic Deploys are disabled. We deploy manually.
 
+# Quick Demo
+<p align="center">
+  <img src="todo-web-ui.gif">
+</p>
