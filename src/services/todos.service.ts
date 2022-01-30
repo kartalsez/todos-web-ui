@@ -1,7 +1,6 @@
 import {TodoItemModel} from "../core/TodoItem.model";
-import {LOCAL_SERVER_URL, SERVER_URL} from "../constants/constants";
+import {SERVER_URL} from "../constants/constants";
 
-// const API_URL=`${LOCAL_SERVER_URL}/api/todos`; TODO: To use local services, you can use this code
 const API_URL=`${SERVER_URL}/api/todos`;
 
 export async function getTodos() {
