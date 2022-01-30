@@ -4,7 +4,7 @@ import {SERVER_URL} from "../constants/constants";
 const API_URL=`${SERVER_URL}/api/todos`;
 
 export async function getTodos() {
-    return fetch(API_URL, {mode:'cors'})
+    return fetch(API_URL)
         .then(resp => {
             if (!resp.ok) {
                 if (resp.status >= 400 && resp.status < 500) {
