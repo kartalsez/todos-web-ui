@@ -12,7 +12,7 @@ const TodoList = () => {
 
     useEffect(() => {
         dispatch(fetchTodos());
-    }, []);
+    }, [dispatch]);
 
     const todoItems = todoList.map((todoItem: TodoItemModel, index: number) =>
         <TodoItem
