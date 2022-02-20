@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit'
-import {TodoItemModel} from "../../../core/TodoItem.model";
+import {TodoItemModel} from '../../../core/TodoItem.model';
 import {
     createTodo,
     fetchTodos,
@@ -8,7 +8,7 @@ import {
     isRejectedAction,
     removeTodo,
     updateTodo
-} from "./functions";
+} from './functions';
 
 export interface TodolistState {
     todoList: Array<TodoItemModel>,
@@ -35,10 +35,10 @@ export const todoListSlice = createSlice({
                 state.todoList.push(action.payload);
             })
             .addCase(removeTodo.fulfilled, (state, action) => {
-                state.todoList.splice(action.payload, 1);
+                action.payload && state.todoList.splice(action.payload, 1);
             })
             .addCase(updateTodo.fulfilled, (state, action) => {
-                state.todoList[action.payload].isCompleted = !state.todoList[action.payload].isCompleted;
+                action.payload && (state.todoList[action.payload].isCompleted = !state.todoList[action.payload].isCompleted);
             })
             .addMatcher(isPendingAction, (state, action) => {
                 state.loading = true
