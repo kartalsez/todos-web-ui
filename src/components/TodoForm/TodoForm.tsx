@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './TodoForm.css';
-import {useDispatch} from "react-redux";
-import {createTodo} from "../../redux/features/todoList/functions";
+import {useDispatch} from 'react-redux';
+import {createTodo} from '../../redux/features/todoList/functions';
 
 const TodoForm = () => {
     const [inputValue, setInputValue] = useState('');
@@ -13,9 +13,9 @@ const TodoForm = () => {
     }
 
     return (
-        <section className="addTodo" >
+        <section className='addTodo' >
             <input
-                type="text"
+                type='text'
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}/>
             <button onClick={handleSubmit}> Add Todo </button>
