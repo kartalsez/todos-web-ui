@@ -18,12 +18,11 @@
     margin-top: 8px
 }
 
-.todoItem span, p {
+.todoItem span,
+p {
     cursor: pointer;
 }
 
 .todoItem.completed p {
     text-decoration: line-through;
 }
-
-
