@@ -15,11 +15,12 @@ const TodoForm = () => {
   return (
     <section className="addTodo">
       <input
+        data-testid="todoInput"
         type="text"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />
-      <button onClick={handleSubmit}> Add Todo </button>
+      <button data-testid="addTodo" onClick={handleSubmit}> Add Todo </button>
     </section>
   );
 };
