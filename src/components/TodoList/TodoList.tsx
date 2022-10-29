@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './TodoList.css';
 import TodoItem from './TodoItem';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
+import { AppDispatch, RootState } from '../../redux/store';
 import { TodoItemModel } from '../../core/TodoItem.model';
 import {
   fetchTodos,
@@ -11,7 +11,7 @@ import {
 } from '../../redux/features/todoList/functions';
 
 const TodoList = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const { todoList } = useSelector((state: RootState) => state.todoList) || [];
 
   useEffect(() => {

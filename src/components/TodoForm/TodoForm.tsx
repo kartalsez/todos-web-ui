@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import './TodoForm.css';
 import { useDispatch } from 'react-redux';
 import { createTodo } from '../../redux/features/todoList/functions';
+import { AppDispatch } from '../../redux/store';
 
 const TodoForm = () => {
   const [inputValue, setInputValue] = useState('');
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleSubmit = () => {
     dispatch(createTodo(inputValue));
